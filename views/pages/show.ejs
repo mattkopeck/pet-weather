@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../partials/header.ejs %>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Pet Detail</h1>
+    <ul class="list-group">
+      <li class="list-group-item"><%= pet.name %></li>
+      <li class="list-group-item"><%= pet.breed %></li>
+      <li class="list-group-item"><%= pet.type %></li>
+      <% if (weather == 'rain') { %>
+        <li class="list-group-item">Umbrella</li>
+      <% } else { %>
+        <li class="list-group-item"><%= weather %></li>
+      <% } %>
+    </ul>
+    
+     <% if (pet.breed == 'Beagle') { %>
+	    <% if (weather == 'rain') { %>
+		    <img src="/img/01.jpg" class="center-block" height="400">
+		<% } else { %>
+			<img src="/img/01_dry.jpg" class="center-block" height="400">
+	    <% } %>
+    <% } %>
+    <% if (pet.breed == 'Terrier') { %>
+	    <% if (weather == 'rain') { %>
+		    <img src="/img/02.jpg" class="center-block" height="400">
+		<% } else { %>
+			<img src="/img/02_dry.jpg" class="center-block" height="400">
+	    <% } %>
+    <% } %>
+    <% if (pet.breed == 'Poodle') { %>
+	    <% if (weather == 'rain') { %>
+		    <img src="/img/03.jpg" class="center-block" height="400">
+		<% } else { %>
+			<img src="/img/03_dry.jpg" class="center-block" height="400">
+	    <% } %>
+    <% } %>
+    <% if (pet.breed == 'Weiner') { %>
+	    <% if (weather == 'rain') { %>
+		    <img src="/img/04.jpg" class="center-block" height="400">
+		<% } else { %>
+			<img src="/img/04_dry.jpg" class="center-block" height="400">
+	    <% } %>
+    <% } %>
+    <% if (pet.breed == 'Chihuahua') { %>
+	    <% if (weather == 'rain') { %>
+		    <img src="/img/05.jpg" class="center-block" height="400">
+		<% } else { %>
+			<img src="/img/05_dry.jpg" class="center-block" height="400">
+	    <% } %>
+    <% } %>
+    <% if (pet.breed == 'Siamese') { %>
+	    <% if (weather == 'rain') { %>
+		    <img src="/img/cat.jpg" class="center-block" height="400">
+		<% } else { %>
+			<img src="/img/cat_dry.jpg" class="center-block" height="400">
+	    <% } %>
+    <% } %>
+
+  </div>
+</body>
+</html>
